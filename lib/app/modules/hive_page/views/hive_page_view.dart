@@ -10,20 +10,25 @@ class HivePageView extends GetView<HivePageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown,
-      appBar: AppBar(
-        title: const Text('Hive Page'),
-        centerTitle: true,
-      ),
+      backgroundColor: context.theme.colorScheme.secondary,
+      appBar: context.isPhone
+          ? null
+          : AppBar(
+              centerTitle: true,
+              title: const AppText(
+                text: 'Hive',
+                fontSize: 20,
+              ),
+            ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(12),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: AppText(
               fontSize: 22,
               text: 'Student List',
-              color: Colors.white,
+              color: context.theme.colorScheme.onSecondary,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -62,9 +67,9 @@ class HivePageView extends GetView<HivePageController> {
                           ),
                         ),
                         trailing: IconButton(
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.delete,
-                            color: Colors.red,
+                            color: context.theme.colorScheme.error,
                           ),
                           onPressed: () => Get.dialog(
                             DeleteDialog(

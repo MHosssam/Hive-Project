@@ -21,6 +21,13 @@
             "type": "dart"
         },
         {
+            "name": "Mohammed Hosam",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "deviceId": "Redmi Note 8 Pro",
+        }, 
+        {
             "name": "hive_project (profile mode)",
             "request": "launch",
             "type": "dart",

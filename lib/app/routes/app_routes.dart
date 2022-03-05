@@ -5,10 +5,12 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const HIVE_PAGE = _Paths.HIVE_PAGE;
+  static const HOME_ROOT = _Paths.HOME_ROOT;
+  static const HIVE_PAGE = HOME_ROOT + _Paths.HIVE_PAGE;
 }
 
 abstract class _Paths {
   _Paths._();
+  static const HOME_ROOT = '/home';
   static const HIVE_PAGE = '/hive-page';
 }

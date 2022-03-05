@@ -40,11 +40,26 @@ class AppFormBuilderTextField extends StatefulWidget {
 
 class _AppFormBuilderTextFieldState extends State<AppFormBuilderTextField> {
   late bool isSecure = widget.obscureText;
+  late FocusNode myFocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    myFocusNode = FocusNode();
+  }
+
+  @override
+  void dispose() {
+    myFocusNode.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
       child: FormBuilderTextField(
+        focusNode: myFocusNode,
         name: widget.name,
         obscureText: isSecure,
         valueTransformer: widget.valueTransformer,

@@ -13,14 +13,11 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  get: 4.6.1
-  dio: ^4.0.4
-  uuid: ^3.0.6
+
   #form builder=====
-  form_builder_phone_field: ^1.0.0-beta.0
-  form_builder_validators: ^7.0.0
-  flutter_form_builder: ^7.0.0
-  form_builder_extra_fields: ^7.0.0
+  form_builder_validators: ^7.6.1
+  flutter_form_builder: ^7.1.1
+  form_builder_extra_fields: ^7.1.0
   form_builder_image_picker:
     git:
       url: git@github.com:Bdaya-Dev/form_builder_image_picker.git
@@ -31,6 +28,11 @@ dependencies:
   hive_flutter: ^1.1.0
   path_provider: ^2.0.9
   # hive =======
+  get: 4.6.1
+  dio: ^4.0.4
+  uuid: ^3.0.6
+  flutter_zoom_drawer: ^2.3.1
+  switcher_button: ^0.0.4
 
 dev_dependencies:
   # hive =======

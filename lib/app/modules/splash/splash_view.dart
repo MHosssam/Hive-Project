@@ -6,11 +6,12 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.theme.colorScheme.secondary,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Image.asset(
-            AppUi.assets.hive,
+            AppUi.assets.logo,
             fit: BoxFit.cover,
           ),
         ),

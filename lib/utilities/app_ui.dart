@@ -13,7 +13,7 @@ class _AppColors {
   final deepColor = const Color(0xff00182C);
   final appRed = Colors.red;
   final appBlue = const Color(0xff3A96AD);
-  final appOrange = const Color(0xffFF702A);
+  final appOrange = const Color.fromARGB(255, 211, 87, 25);
   final appGreen = const Color(0xff65A090);
   final appYellow = const Color(0xffFFC229);
   final appLightYellow = const Color(0xffFFF6DF);
@@ -32,6 +32,7 @@ class _AppFonts {
 }
 
 class _AppAssets {
+  final logo = 'assets/images/pub.png';
   final hive = 'assets/images/hive.png';
   final dio = 'assets/images/dio.png';
 }
@@ -47,11 +48,8 @@ class _AppThemes {
       );
   ThemeData get lightTheme => ThemeData(
         colorScheme: ColorScheme.light(
-          primary: AppUi.colors.mainColor,
-          secondary: AppUi.colors.appOrange,
+          secondary: AppUi.colors.mainColor,
           onSecondary: AppUi.colors.appWhite,
-          surface: AppUi.colors.deepColor,
-          onSurface: AppUi.colors.appWhite,
         ),
         iconTheme: primaryIconTheme,
         inputDecorationTheme: InputDecorationTheme(
@@ -96,12 +94,8 @@ class _AppThemes {
       );
   ThemeData get darkTheme => ThemeData(
         colorScheme: ColorScheme.dark(
-          primary: AppUi.colors.deepColor,
-          onPrimary: AppUi.colors.appWhite,
-          secondary: AppUi.colors.appOrange,
+          secondary: AppUi.colors.deepColor,
           onSecondary: AppUi.colors.appWhite,
-          surface: AppUi.colors.deepColor,
-          onSurface: AppUi.colors.appWhite,
         ),
         iconTheme: whiteIconTheme,
         inputDecorationTheme: InputDecorationTheme(
